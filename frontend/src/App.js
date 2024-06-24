@@ -68,6 +68,17 @@ const App = () => {
             console.error('Error editing task:', error); // Log error to the console
         }
     };
+// Function to handle deleting a task
+const handleDeleteTask = async (id) => {
+    setError(''); // Clear any previous errors
+    try {
+        await axios.delete(`http://localhost:5000/api/tasks/${id}`); // Send DELETE request to delete task
+        setTasks(tasks.filter(task => task._id !== id)); // Remove the deleted task from the tasks state
+    } catch (error) {
+        setError('Error deleting task'); // Set error message if deleting task fails
+        console.error('Error deleting task:', error); // Log error to the console
+    }
+};
 
     return (
         <div className="container">
@@ -126,6 +137,7 @@ const App = () => {
                             ))}
                         </ul>
                     </div>
+                    
 
                     {/* Edit Task */}
                     {editTask && (

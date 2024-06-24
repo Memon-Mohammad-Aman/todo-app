@@ -1,4 +1,4 @@
-# Topo App
+# Todo Apps
 
 ## Project Overview
 
@@ -11,7 +11,7 @@ Before you begin, ensure you have the following software installed on your syste
 
 ## Getting Started
 
-Follow these steps to set up and run the Topo App on your local machine:
+Follow these steps to set up and run the Todo App on your local machine:
 
 ### 1. Clone the Repository
 
